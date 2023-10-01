@@ -6,7 +6,6 @@ local_path = os.path.dirname(os.path.abspath(__file__))
 config_path = os.path.join(local_path, "config")
 sys.path.append(config_path)
 
-from flask import jsonfy
 from config.config import PIPELINE_NAME
 
 from google.cloud.aiplatform import pipeline_jobs
