@@ -1,5 +1,6 @@
 import os
 import sys
+from flask import jsonify
 
 local_path = os.path.dirname(os.path.abspath(__file__))
 config_path = os.path.join(local_path, "config")
@@ -22,4 +23,4 @@ def run_pipeline_clustering(request) -> bool:
 
 def start_clustering(request):
     response = run_pipeline_clustering(request)
-    return jsonfy({"mensagem": response}), 200
+    return jsonify({"mensagem": response}), 200  #jsonfy({"mensagem": response}), 200
